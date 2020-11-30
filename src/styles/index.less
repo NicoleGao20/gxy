@@ -1,0 +1,489 @@
+@import './variables.less';
+@import './mixin.less';
+@import './transition.less';
+@import './element-ui.less';
+@import './sidebar.less';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-size: 12px;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+.pull-right {
+  float: right!important
+}
+
+.pull-left {
+  float: left!important
+}
+
+img {
+  max-width: 100%;
+}
+
+//main-container全局样式
+.app-main {
+  min-height: 100%
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.page-container {
+  padding: 15px;
+}
+
+.el-dialog__header {
+  border-bottom: 1px solid #e4e7ed;
+}
+
+.el-dialog__footer {
+  border-top: 1px solid #e4e7ed;
+}
+.el-table__header th {
+  background: #f5f7fa;
+}
+.el-table {
+  border-top: 1px solid #edeef4;
+  border-left: 1px solid #edeef4;
+  border-right: 1px solid #edeef4;
+}
+label {
+  font-weight: 400;
+}
+.label-title {
+  font-size: 16px;
+}
+.action-wrap {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 230px;
+  right: 0;
+  text-align: center;
+  padding: 10px 0;
+  background: #fff;
+  border-top: 1px solid #edeef4;
+}
+
+.action-container {
+  padding-top: 15px;
+  padding: 15px 15px 60px;
+}
+.action-wrap button {
+  width: 120px;
+}
+
+.el-pagination__total{
+  float: left;
+}
+.el-pagination__sizes{
+  float: left;
+}
+.el-message--error {
+  z-index: 10000000000 !important;
+}
+
+.filter-btns {
+  overflow: hidden;
+  border-bottom: 1px dashed#afc2e4 ;
+  margin-bottom: 10px;
+}
+.filter-btns ul li {
+  float: left;
+  color: #435A82;
+  cursor: pointer;
+  height: 28px;
+  line-height: 26px;
+  padding: 0 15px;
+  max-width: 120px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.filter-btns ul li.on {
+  background: #435A82;
+  color: #fff;
+  border: 1px solid#435A82;
+}
+.table-cell-img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.avatar-uploader {
+  .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .el-upload:hover {
+    border-color: #409EFF;
+  }
+  .avatar {
+    width: 80px;
+    height: 80px;
+    display: block;
+  }
+  .avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+}
+
+.device *,
+.device *::before,
+.device *::after {
+  box-sizing: border-box;
+  display: block;
+}
+
+.device {
+  margin: 0 auto;
+  position: relative;
+}
+
+.device .frame {
+  z-index: 1;
+}
+.iphone-x {
+  height: 694px;
+  width: 342px;
+}
+
+.iphone-x .frame {
+  background: #222;
+  border-radius: 54px;
+  box-shadow: inset 0 0 0 2px #606467, inset 0 0 0 6px #e2e3e4;
+  height: 694px;
+  padding: 22px;
+  width: 342px;
+}
+
+.iphone-x .content {
+  background-color: #f6f6f6;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 32px;
+  height: 650px;
+  position: relative;
+  width: 300px;
+}
+.iphone-x .content .time {
+  padding: 5px 0 0 15px;
+}
+.iphone-x .stripe::after,
+.iphone-x .stripe::before {
+  border: solid rgba(51, 51, 51, .25);
+  border-width: 0 6px;
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}
+
+.iphone-x .stripe::after {
+  top: 68px;
+}
+
+.iphone-x .stripe::before {
+  bottom: 68px;
+}
+
+.iphone-x .header {
+  background: #222;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  height: 24px;
+  left: 50%;
+  margin-left: -82px;
+  position: absolute;
+  top: 22px;
+  width: 164px;
+  z-index: 199;
+}
+
+.iphone-x .header::after,
+.iphone-x .header::before {
+  content: "";
+  height: 6px;
+  position: absolute;
+  top: 0;
+  width: 6px;
+}
+
+.iphone-x .header::after {
+  background: radial-gradient(circle at bottom left, transparent 0, transparent 75%, #222 75%, #222 100%);
+  left: -6px;
+}
+
+.iphone-x .header::before {
+  background: radial-gradient(circle at bottom right, transparent 0, transparent 75%, #222 75%, #222 100%);
+  right: -6px;
+}
+
+.iphone-x .sensors::after,
+.iphone-x .sensors::before {
+  content: "";
+  position: absolute;
+}
+
+.iphone-x .sensors::after {
+  background: #444;
+  border-radius: 2.5px;
+  height: 5px;
+  left: 50%;
+  margin-left: -20px;
+  top: 4px;
+  width: 40px;
+}
+
+.iphone-x .sensors::before {
+  background: #444;
+  border-radius: 50%;
+  height: 11px;
+  left: 50%;
+  margin-left: 30px;
+  top: 1px;
+  width: 11px;
+}
+
+.iphone-x .btns {
+  background: #606467;
+  height: 26px;
+  left: -2px;
+  position: absolute;
+  top: 92px;
+  width: 3px;
+}
+
+.iphone-x .btns::after,
+.iphone-x .btns::before {
+  background: #606467;
+  content: "";
+  height: 50px;
+  left: 0;
+  position: absolute;
+  width: 3px;
+}
+
+.iphone-x .btns::after {
+  top: 48px;
+}
+
+.iphone-x .btns::before {
+  top: 112px;
+}
+
+.iphone-x .power {
+  background: #606467;
+  height: 80px;
+  position: absolute;
+  right: -2px;
+  top: 160px;
+  width: 3px;
+}
+
+.deleteFontColor{
+  color: rgb(245, 108, 108)
+}
+.updateonStatus{
+  color: rgb(44, 196, 95)
+}
+.updateoffStatus{
+  color: rgb(121, 44, 44)
+
+}
+ .uploadImgTip{
+  color: #999;
+  font-size: 12px;
+}
+//列表页面
+.page-container-gap{
+  height: 100%;
+  display: flex;
+  flex-direction: column
+}
+.searchWrap{
+  padding: 18px 15px 0 15px;
+  background: white;
+  // border: 1px solid #e5e5e5;
+  // border: 1px solid var(--gray-03,#e5e5e5);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  border-radius: 4px;
+}
+.listAddBtnStyle{
+  margin-bottom: 15px;
+}
+.tableMainContent{
+  padding: 15px 15px 15px 15px;
+  margin-top: 15px;
+  background: white;
+  flex: 1;
+  // border: 1px solid #e5e5e5;
+  // border: 1px solid var(--gray-03,#e5e5e5);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  border-radius: 4px;
+}
+.bottomPagination{
+  margin-top: 10px;
+}
+//表单页面
+.form_footer {
+  position: fixed;
+  line-height: 50px;
+  bottom: 0px;
+  left: 200px;
+  right: 0px;
+  background: white;
+  text-align: center;
+}
+
+.el-input.is-disabled .el-input__inner {
+  background-color: #F5F7FA;
+  border-color: #E4E7ED;
+  color: #35373a;
+  cursor: not-allowed;
+}
+.search-common{
+  margin-bottom: 18px;
+}
+.search-collapse{
+  border: none;
+  background: none;
+  color: #435A82;
+  &:hover {
+    background: transparent;
+    color: #435A82;
+  }
+  .el-icon-d-arrow-right{
+    font-size: 14px;
+    position: relative;
+    left: 4px;
+    transform: rotate(-90deg);
+  }
+}
+.cmp-filter-container {
+  padding-top: 10px;
+  .filter-line-container {
+      display: flex;
+      margin-top: 20px;
+      .line {
+          flex: 1;
+          border-top: 1px solid rgba(235, 235, 235, 1);
+      }
+      .filter-text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 118px;
+          height: 22px;
+          font-size: 12px;
+          border: 1px solid rgba(235, 235, 235, 1);
+          border-top: none;
+          color: #909399;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+  }
+}
+
+.full-width {
+  width: 100% !important;
+}
+.text-right {
+  text-align: right !important;
+}
+
+.el-button--back-button{
+  color: #fff;
+  background-color: #01337A;
+  border-color: #01337A;
+  &.el-button--medium{
+    padding: 10px 12px;
+  }
+  &:hover{
+    background: #345c95;
+    border-color: #345c95;
+    color: #FFF;
+  }
+  &:focus{
+    background: #345c95;
+    border-color: #345c95;
+    color: #FFF;
+  }
+}
+.mt-36{
+  margin-top: 14px;
+}

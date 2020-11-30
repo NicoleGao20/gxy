@@ -1,0 +1,225 @@
+/deep/.el-form {
+    /deep/.el-row {
+      margin-left:8px !important;
+      /deep/ .el-form-item__label{
+        text-align: right !important;
+      }
+      /deep/ .contain-brand{
+        display: flex;
+        /deep/ .el-col{
+          padding-left:0 !important;
+          padding-right:0 !important;
+          /deep/ .el-select{
+            /deep/ .el-input--small{
+             input{
+              height: 28px !important;
+              line-height: 28px !important;
+             }
+            }
+          }
+         
+        }
+       /deep/ .el-form-item{
+         width: 100%;
+         /deep/ .el-form-item__content{
+           margin-left:0 !important;
+         }
+
+       }
+      }
+      /deep/ .contain_number {
+        .monetary-container {
+          /deep/ .el-form-item {
+            width: 47%;
+            display: inline-block;
+          }
+        }
+        .contain_clearance{
+          width:100%;
+          height:30px;
+          border: 1px solid #DCDFE6;
+          input{
+            border:0;
+          }
+        }
+      }
+      /deep/ .el-date-editor, /deep/ .el-select{
+        width:100% !important;
+      }
+    }
+  }
+  /deep/ .demo-ruleForm {
+    .el-input {
+      width: 60%;
+    }
+    .el-select {
+      width: 60%;
+      .el-input {
+        width: 100%;
+      }
+    }
+    .el-textarea {
+      width: 80%;
+    }
+    .delete-btn {
+      margin-left: 15px;
+      color: #328ede;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .extra-tip {
+      font-size: 12px;
+    }
+    /deep/ .el-dialog__body {
+      /deep/ .brand_explainLog {
+        li:first-of-type {
+          display: flex;
+          .brand_explain {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: -19px;
+            padding: 0 20px 0 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            padding: 15px;
+            padding-left: 30px;
+            div {
+              display: flex;
+              width: 50%;
+              /deep/ .el-rate {
+                /deep/ .el-rate__text {
+                  width: 29px;
+                }
+              }
+            }
+          }
+        }
+      }
+      /deep/.autograph {
+        padding-top: 20px !important;
+        span:nth-of-type(2){
+          margin:10px
+        }
+        span:last-of-type{
+          color:red;
+        }
+      }
+    }
+    /deep/ .wrap_export {
+      .export_file {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        li:first-of-type {
+          display: flex;
+          justify-content: center;
+          i {
+            font-size: 50px;
+            color: #435a82;
+          }
+        }
+        li:nth-of-type(2) {
+          margin: 20px 0;
+          font-size: 16px;
+          font-weight: 800;
+          span {
+            color: #435a82 !important;
+          }
+        }
+        li:nth-of-type(3) {
+          margin-bottom: 20px;
+        }
+        li:last-of-type {
+          width: 50%;
+          /deep/ .el-input {
+            input {
+              outline: none; // 去除选中状态边框
+              background-color: rgba(0, 0, 0, 0); // 透明背景
+            }
+          }
+        }
+      }
+    }
+  }
+  .logistics{
+   /deep/ .el-dialog__body{
+      padding:30px 0 !important;
+    }
+    .logisticsDialog{
+      display:flex;
+      flex-direction:column;
+      padding:0px 20px 30px 20px;
+      border-bottom: 1px solid #e4e7ed;
+      ol,.oddNumbers{
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        li{
+          margin-right:15px;
+          color: #000;
+          font-size: 18px;
+        }
+        li:nth-of-type(2){
+          margin:0 20px;
+        }
+      }
+      .oddNumbers{
+        margin:15px 0;
+        color: #000;
+        font-size: 18px;
+      }
+    }
+    .el-timeline{
+      padding-left: 74px;
+      padding-top: 23px;
+    }
+  }
+ 
+
+.autograph{
+  .el-select{
+    width:15%;
+  }
+}
+/deep/ .shippingAddress{
+  /deep/ .el-col{
+    padding-left:0 !important;
+    padding-right:0!important;
+  }
+}
+.contain_header {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  li {
+    font-size: 15px;
+    color: #435a82;
+    margin-right: 14px;
+  }
+
+  li:nth-of-type(2) {
+    margin-right: 15px;
+  }
+
+  li:not(:first-child) {
+    color: none;
+    font-size: normal;
+  }
+}
+.evaluate-receiver{
+  width: 60%;
+  border: 1px solid #DCDFE6;
+  border-radius: 4px;
+  padding-left: 10px;
+  background: #F5F7FA;
+  span{
+    margin-right: 10px;
+  }
+  .err-status{
+    color: #F56C6C;
+  }
+}

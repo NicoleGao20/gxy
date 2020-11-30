@@ -1,0 +1,59 @@
+<template>
+    <el-table
+    :data="tableData"
+    stripe
+    border
+    style="width: 100%">
+    <el-table-column
+      prop="create_time"
+      label="修改时间"
+      :resizable="false">
+    </el-table-column>
+    <el-table-column
+      prop="mobile_bind"
+      label="手机号"
+      :resizable="false">
+    </el-table-column>
+    <el-table-column
+      prop="level_name_before"
+      label="原等级"
+      :resizable="false">
+    </el-table-column>
+    <el-table-column
+      prop="level_name"
+      label="新等级"
+      :resizable="false">
+    </el-table-column>
+    <el-table-column
+      label="类型"
+      prop="level_alter_type"
+      :resizable="false">
+    </el-table-column>
+    <el-table-column
+      prop="level_alter_method"
+      label="变更方式"
+      :resizable="false">
+    </el-table-column>
+    <el-table-column
+      prop="create_user"
+      label="修改人"
+      :resizable="false">
+    </el-table-column>
+    <el-table-column
+      prop="level_alter_desc"
+      label="备注"
+      :resizable="false">
+    </el-table-column>
+  </el-table>
+</template>
+
+<script>
+export default {
+    props:{
+        tableData:{
+            type:Array,
+            default:[]
+        }
+    }
+}
+</script>

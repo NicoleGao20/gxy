@@ -1,0 +1,19 @@
+{
+  "chooseMaterial": "Choose Material",
+	"noRelatedMaterial": "No Related Material",
+	"confirm": "Confirm",
+  "cancel": "Cancel",
+	"search": {
+    "pleaseSelect":"Please Select",
+    "eventName":"Event Name",
+    "eventCode":"Event Code",
+    "placeholder":"Placeholder",
+    "search":"Search"
+  },
+	"list": {
+		"id":"No",
+		"choose":"Choose",
+		"choosed":"Choosed",
+		"updateTime": "Update Time"
+	}
+}

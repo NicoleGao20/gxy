@@ -1,0 +1,402 @@
+/**
+ * sass 定义的公用部分变量、函数、混合项
+ */
+
+/* 颜色变量数组 */
+$colors: (
+  primary: #01337A,
+  success: #00B2A9,
+  warning: #FFC800,
+  danger: #D90F06,
+  text-primary: #606266,
+  text-regular: #909399,
+  white: #ffffff,
+  black: #000,
+  black1: #333,
+  black2: #222
+);
+
+$sizes: 0, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 22, 24, 25, 26, 28, 30, 32, 34, 35, 36, 38, 40, 45, 46, 50, 55, 60, 65, 70, 75, 80, 90, 100, 120, 150, 180,200;
+
+/**
+ * 获取颜色值 
+ * @param {Object} $key 颜色值对应key primary success 等
+ */
+ @function getColor($key) {
+	@return map-get($colors, $key);
+}
+// 使用方式 class="color-primary bg-color-primary"
+@each $label, $map in $colors {
+  #neo_body .color-#{$label}{
+		color: #{$map}
+	}
+  #neo_body .bg-color-#{$label}{
+		background-color: #{$map}
+	}
+}
+// 使用方式 class="fs-12"
+@each $item in $sizes {
+  .fs-#{$item}
+  {
+      font-size: #{$item}px
+  }
+  .pl-#{$item}
+  {
+      padding-left: #{$item}px
+  }
+  .pr-#{$item}
+  {
+      padding-right: #{$item}px
+  }
+  .pt-#{$item}
+  {
+      padding-top: #{$item}px
+  }
+  .pb-#{$item}
+  {
+      padding-bottom: #{$item}px
+  }
+  .ml-#{$item}
+  {
+      margin-left: #{$item}px
+  }
+  .mr-#{$item}
+  {
+      margin-right: #{$item}px
+  }
+  .mt-#{$item}
+  {
+      margin-top: #{$item}px
+  }
+  .mb-#{$item}
+  {
+      margin-bottom: #{$item}px
+  }
+  .lh-#{$item}
+  {
+      line-height: #{$item}px
+  }
+  .br-#{$item}
+  {
+      border-radius: #{$item}px
+  }
+}
+
+/* 主题色配置*/
+/* 主题背景色组 */
+$themeBgColor:  getColor(white) getColor(primary) getColor(success);
+/* 主题字体色组 */
+$themeTxtColor: getColor(text-primary) getColor(white) getColor(white);
+/*通过该函数设置字体颜色，后期方便统一管理；*/
+@mixin fontColor($color){
+	color:$color;
+  [data-theme="default"] & {
+    color:nth($themeTxtColor,1);
+  }
+  [data-theme="theme1"] & {
+    color:nth($themeTxtColor,2);
+  }
+  [data-theme="theme2"] & {
+    color:nth($themeTxtColor,3);
+  }
+}
+/*通过该函数设置字体颜色，与主题背景颜色一致，后期方便统一管理；*/
+@mixin fontBgColor($color){
+	color:$color;
+  [data-theme="default"] & {
+    color:nth($themeBgColor,1);
+  }
+  [data-theme="theme1"] & {
+    color:nth($themeBgColor,2);
+  }
+  [data-theme="theme2"] & {
+    color:nth($themeBgColor,3);
+  }
+}
+/*通过该函数设置边框颜色，与主题背景颜色一致，后期方便统一管理；*/
+@mixin borderBgColor($color){
+	border-color:$color;
+  [data-theme="default"] & {
+    border-color:nth($themeBgColor,1);
+  }
+  [data-theme="theme1"] & {
+    border-color:nth($themeBgColor,2);
+  }
+  [data-theme="theme2"] & {
+    border-color:nth($themeBgColor,3);
+  }
+}
+/*通过该函数设置主题颜色，后期方便统一管理；*/
+@mixin bgColor($color){
+  background-color:$color;
+  [data-theme="default"] & {
+    background-color:nth($themeBgColor,1);
+  }
+  [data-theme="theme1"] & {
+    background-color:nth($themeBgColor,2);
+  }
+  [data-theme="theme2"] & {
+    background-color:nth($themeBgColor,3);
+  }
+}
+
+
+@mixin ell{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@mixin borderGray($color: null){
+  @if not $color {
+    border:1px solid getColor(gray);
+  }@else{
+    border:1px solid $color;
+  }
+
+}
+@mixin borderBottomGray($color: null){
+  @if not $color {
+  border-bottom:1px solid getColor(gray);
+  }@else{
+    border-bottom:1px solid $color;
+  }
+}
+@mixin borderTopGray($color: null){
+  @if not $color {
+  border-top:1px solid getColor(gray);
+  }@else{
+    border-top:1px solid $color;
+  }
+}
+@mixin borderRightGray($color: null){
+  @if not $color {
+  border-right:1px solid getColor(gray);
+  }@else{
+    border-right:1px solid $color;
+  }
+}
+
+@mixin textAlignCenter{
+    text-align: center;
+}
+@mixin verticalAlignMiddle{
+    vertical-align: middle;
+}
+@mixin padding($tb,$lf){
+  padding: $tb $lf;
+}
+@mixin fixedCenter($width: null, $height: null) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    @if not $width and not $height { transform: translate(-50%, -50%); }
+    @else if $width and $height { width: $width; height: $height; margin: -($width / 2) #{0 0} -($height / 2); }
+    @else if not $height { width: $width; margin-left: -($width / 2); transform: translateY(-50%); }
+    @else { height: $height; margin-top: -($height / 2); transform: translateX(-50%); }
+}
+
+@mixin flexStyle($direction:row, $row:center, $col:center) {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+    -webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    -o-flex-direction: $direction;
+    flex-direction: $direction;
+
+    -webkit-justify-content: $row;
+    -moz-justify-content: $row;
+    -ms-justify-content: $row;
+    -o-justify-content: $row;
+    justify-content: $row;
+
+    -webkit-box-align: $col;
+    -webkit-align-items: $col;
+    -moz-align-items: $col;
+    -ms-align-items: $col;
+    -o-align-items: $col;
+    align-items: $col;
+}
+.pannel-left {
+    background-color: getColor(primary);
+}
+
+$container: 'neo-index-index';
+.#{$container}{
+    height: 100%;   
+    display: flex;
+    flex-direction: column;
+    .aside-top{
+        padding: 10px 0;
+        text-align: center;
+        img{
+            width: 164px;
+        }
+    }
+    .aside-center{
+        cursor: pointer;
+        line-height: 50px;
+        text-align: center;
+        color: getColor(white);
+    }
+    .el-menu {
+        background-color: getColor(primary);
+        border-right: none;
+        color: getColor(white);
+        .el-menu-item {
+            height: 46px;
+            line-height: 46px;
+            color: getColor(white);
+            font-size: 13px;
+            i {
+                color: getColor(white);
+            }
+            &:hover {
+                color: getColor(primary);
+                i {
+                    color: getColor(primary);
+                }
+            }
+        }
+        .el-menu-item-group {
+            background-color: getColor(primary);
+        }
+        .neo-index-index .el-menu-item-group {
+            background-color: getColor(white);
+        }
+        .el-menu-item.is-active {
+            background-color: getColor(white);
+            color: getColor(primary);
+            i {
+                color: getColor(primary);
+            }
+        }
+    }
+
+    .aside-nav{
+        color: getColor(primary);
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .neo-header{
+        padding-left: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #EBEBEB;
+        &-right{
+            text-align: right;
+            display: flex;
+            align-items: center;
+        }
+        .ling{
+            position: relative;
+            margin-right: 30px;
+            i{
+                font-size: 30px;
+                color: getColor(primary);
+            }
+            em{
+                position: absolute;
+                top: 4px;
+                right: 4px;
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                background: getColor(danger);
+            }
+        }
+        .user-txt{
+            i{
+                margin-left: 13px;
+            }
+        }
+        .export-icon i{
+            font-size: 24px;
+            margin-right: 30px;
+            color: getColor(primary);
+            padding: 4px;
+            border-radius: 50%;
+            &.active {
+                background-color: rgba(255, 125, 0, 0.16);
+            }
+        }
+    }
+    .neo-main{
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        background: #FAFAFA;
+    }
+    .drawer-content {
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            padding: 0 28px;
+            .close-drawer,.clear-span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgba(220, 223, 230, 1);
+                padding: 0 10px;
+                height: 30px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .clear-span {
+                color: getColor(danger);
+            }
+        }
+        .content {
+            height: calc(100vh - 130px);
+            overflow-y: scroll;
+            padding: 0 30px;
+            .export-item {
+                padding-bottom: 15px;
+                border-bottom: 1px solid rgba(220, 223, 230, 1);
+                .export-title {
+                    position: relative;
+                    color: getColor(text-regular);
+                    font-weight: bold;
+                    padding-left: 15px;
+                    margin: 15px 0;
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        content: "";
+                        width: 4px;
+                        background-color: getColor(primary);
+                        border-radius: 5px;
+                    }
+                    &.success::before {
+                        background-color: getColor(success);
+                    }
+                    &.failed::before {
+                        background-color: rgba(192, 196, 204, 1);
+                    }
+                }
+                .status {
+                    color: getColor(primary);
+                    margin-top: 5px;
+                    font-size: 12px;
+                    &.success {
+                        color: getColor(success);
+                    }
+                    &.failed {
+                        color: rgba(192, 196, 204, 1);
+                    }
+                }
+            }
+        }
+    }
+}

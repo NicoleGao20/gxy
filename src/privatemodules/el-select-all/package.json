@@ -1,0 +1,59 @@
+{
+  "_from": "el-select-all@^1.0.2",
+  "_id": "el-select-all@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-97OEmRDtWh+dxRihJvgbjVsmjhGCwGIt53FujdvyBFohp0HOJJ2e3F2CvqTMkabLAEJ/HasV3TcXWkc/Ybauiw==",
+  "_location": "/el-select-all",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "el-select-all@^1.0.2",
+    "name": "el-select-all",
+    "escapedName": "el-select-all",
+    "rawSpec": "^1.0.2",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.2"
+  },
+  "_requiredBy": [
+    "/belle-choose-organ-level"
+  ],
+  "_resolved": "http://10.0.30.96:8381/repository/npm-group/el-select-all/-/el-select-all-1.0.2.tgz",
+  "_shasum": "88b44a29653104f55eda1d6e9792b505a928737c",
+  "_spec": "el-select-all@^1.0.2",
+  "_where": "D:\\研发二部\\manlun\\cdp-admin-ui\\node_modules\\belle-choose-organ-level",
+  "bundleDependencies": false,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "core-js": "^2.6.5",
+    "element-ui": "^2.8.2",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "deprecated": false,
+  "description": "el-select-all-百丽组件库",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "keyword": "el-select-all 业务通用组件 百丽组件库",
+  "main": "lib/el-select-all.umd.min.js",
+  "name": "el-select-all",
+  "private": false,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "dev": "vue-cli-service serve",
+    "lib": "vue-cli-service build --target lib  --dest lib packages/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "version": "1.0.2"
+}

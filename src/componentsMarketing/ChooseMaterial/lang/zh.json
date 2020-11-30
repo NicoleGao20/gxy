@@ -1,0 +1,19 @@
+{
+  "chooseMaterial": "选择素材",
+	"noRelatedMaterial": "暂无相关素材",
+	"confirm": "确 定",
+  "cancel": "取 消",
+	"search": {
+    "pleaseSelect":"活动名称",
+    "eventName":"素材标题",
+    "eventCode":"素材编号",
+    "placeholder":"请输入",
+    "search":"搜索"
+  },
+	"list": {
+		"id":"编号",
+		"choose":"选择",
+		"choosed":"已选",
+		"updateTime": "更新时间"
+	}
+}

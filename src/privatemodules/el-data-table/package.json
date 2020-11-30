@@ -1,0 +1,110 @@
+{
+  "_from": "el-data-table@^1.1.1",
+  "_id": "el-data-table@1.6.1",
+  "_inBundle": false,
+  "_integrity": "sha1-Dk1GvyYB2G0wfGrIUexQuqMcWx8=",
+  "_location": "/el-data-table",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "el-data-table@^1.1.1",
+    "name": "el-data-table",
+    "escapedName": "el-data-table",
+    "rawSpec": "^1.1.1",
+    "saveSpec": null,
+    "fetchSpec": "^1.1.1"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://10.0.30.96:8381/repository/npm-group/el-data-table/-/el-data-table-1.6.1.tgz",
+  "_shasum": "0e4d46bf2601d86d307c6ac851ec50baa31c5b1f",
+  "_spec": "el-data-table@^1.1.1",
+  "_where": "D:\\研发二部\\manlun\\cdp-admin-ui",
+  "author": {
+    "name": "https://github.com/FEMessage"
+  },
+  "browser": {
+    "./sfc": "src/el-data-table.vue"
+  },
+  "bugs": {
+    "url": "https://github.com/FEMessage/el-data-table/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "lodash.get": "^4.4.2"
+  },
+  "deprecated": "From now on(1.6.2), el-data-table rename to @femessage/el-data-table, for the next new features and bug fixes, you'd better install new package: yarn add @femessage/el-data-table",
+  "description": "base on element-ui, makes crud easily",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@femessage/el-form-renderer": "^1.6.0",
+    "axios": "^0.19.0",
+    "babel-loader": "^8.0.5",
+    "element-ui": "2.4.11",
+    "file-loader": "^3.0.1",
+    "github-release-notes": "^0.17.0",
+    "glob": "^7.1.3",
+    "husky": "^0.14.3",
+    "jest": "^24.8.0",
+    "minimist": "^1.2.0",
+    "prettier": "1.12.1",
+    "pretty-quick": "^1.4.1",
+    "rollup": "^1.9.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-vue": "^4.7.2",
+    "standard-version": "^6.0.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue": "^2.5.16",
+    "vue-loader": "^15.7.0",
+    "vue-styleguidist": "^3.11.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.29.6"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "files": [
+    "src",
+    "dist",
+    "yarn.lock"
+  ],
+  "homepage": "https://github.com/FEMessage/el-data-table#readme",
+  "keywords": [
+    "vue",
+    "element-ui",
+    "table",
+    "data-table",
+    "element table"
+  ],
+  "license": "MIT",
+  "main": "dist/el-data-table.umd.js",
+  "module": "dist/el-data-table.esm.js",
+  "name": "el-data-table",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FEMessage/el-data-table.git"
+  },
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd & npm run doc",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/el-data-table.esm.js",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/el-data-table.umd.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/el-data-table.min.js",
+    "dev": "vue-styleguidist server",
+    "doc": "vue-styleguidist build",
+    "precommit": "pretty-quick --staged",
+    "release": "gren release --override",
+    "stdver": "standard-version -m '[skip ci] chore(release): v%s'",
+    "test": "jest"
+  },
+  "unpkg": "dist/el-data-table.min.js",
+  "version": "1.6.1",
+  "vue-sfc-cli": "1.10.1"
+}

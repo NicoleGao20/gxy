@@ -1,0 +1,64 @@
+{
+  "_args": [
+    [
+      "belle-choose-material@0.2.4",
+      "D:\\研发二部\\manlun\\cdp-backend-ui"
+    ]
+  ],
+  "_from": "belle-choose-material@0.2.4",
+  "_id": "belle-choose-material@0.2.4",
+  "_inBundle": false,
+  "_integrity": "sha512-ZVhrGaH/ERN5Rwdm0/0S6u70ryTYMRNvKXluzngpSI8kTuhO8yiDk1DgO22J5qtcWn08j1E4+JX6oBwrpL5d/A==",
+  "_location": "/belle-choose-material",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "belle-choose-material@0.2.4",
+    "name": "belle-choose-material",
+    "escapedName": "belle-choose-material",
+    "rawSpec": "0.2.4",
+    "saveSpec": null,
+    "fetchSpec": "0.2.4"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://10.0.30.96:8381/repository/npm-group/belle-choose-material/-/belle-choose-material-0.2.4.tgz",
+  "_spec": "0.2.4",
+  "_where": "D:\\研发二部\\manlun\\cdp-backend-ui",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "core-js": "^2.6.5",
+    "element-ui": "^2.8.2",
+    "vue": "^2.6.10",
+    "vue-infinite-scroll": "^2.0.2",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "description": "百丽选择素材",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "keyword": "belle-choose-material",
+  "main": "lib/belle-choose-material.umd.min.js",
+  "name": "belle-choose-material",
+  "private": false,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib  --dest lib packages/index.js",
+    "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve",
+    "start": "npm run serve"
+  },
+  "version": "0.2.4"
+}

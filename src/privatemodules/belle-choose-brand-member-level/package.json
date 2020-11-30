@@ -1,0 +1,59 @@
+{
+  "_from": "belle-choose-brand-member-level@^1.0.8",
+  "_id": "belle-choose-brand-member-level@1.0.8",
+  "_inBundle": false,
+  "_integrity": "sha512-t+H/Cac4h8eXkvUWRyRc7vdkmd7JWTeCBGvh8QPCENE6J+fhNEB1tU67fT4+AxqYedTZnsUKJN87g7CvGXj8dg==",
+  "_location": "/belle-choose-brand-member-level",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "belle-choose-brand-member-level@^1.0.8",
+    "name": "belle-choose-brand-member-level",
+    "escapedName": "belle-choose-brand-member-level",
+    "rawSpec": "^1.0.8",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.8"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://10.0.30.96:8381/repository/npm-group/belle-choose-brand-member-level/-/belle-choose-brand-member-level-1.0.8.tgz",
+  "_shasum": "06a33cc35a776fd40c2887fc5438423620f2ef9a",
+  "_spec": "belle-choose-brand-member-level@^1.0.8",
+  "_where": "D:\\研发二部\\manlun\\cdp-admin-ui",
+  "bundleDependencies": false,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "core-js": "^2.6.5",
+    "element-ui": "^2.8.2",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "deprecated": false,
+  "description": "品牌会员等级获取 belle-choose-brand-member-level-百丽组件库",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "keyword": "belle-choose-brand-member-level 业务通用组件 百丽组件库",
+  "main": "lib/belle-choose-brand-member-level.umd.min.js",
+  "name": "belle-choose-brand-member-level",
+  "private": false,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "dev": "vue-cli-service serve",
+    "lib": "vue-cli-service build --target lib  --dest lib packages/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "version": "1.0.8"
+}

@@ -1,0 +1,39 @@
+<template>
+    <el-table
+    :data="tableData"
+    stripe
+    border
+    style="width: 100%">
+    <el-table-column
+      prop="transition_time"
+      label="互动时间"
+      :resizable="false">
+    </el-table-column>
+    <el-table-column
+      prop="intc_type"
+      label="活动类型"
+      :resizable="false">
+    </el-table-column>
+    <el-table-column
+      prop="cnt_intc"
+      label="参与次数"
+      :resizable="false">
+    </el-table-column>
+    <el-table-column
+      prop="platform_name"
+      label="互动渠道"
+      :resizable="false">
+    </el-table-column>
+  </el-table>
+</template>
+
+<script>
+export default {
+    props:{
+        tableData:{
+            type:Array,
+            default:[]
+        }
+    }
+}
+</script>

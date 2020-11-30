@@ -1,0 +1,59 @@
+{
+  "_from": "belle-choose-city@^1.1.3",
+  "_id": "belle-choose-city@1.1.8",
+  "_inBundle": false,
+  "_integrity": "sha512-SJSVNm7mzfvmwQB20CVO/Fq1NkOEIileMxBVnBOt5MLmHQSVl4D/zvmWwcAVcBXXU9i5ffwaZp1jJlFjTywDhQ==",
+  "_location": "/belle-choose-city",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "belle-choose-city@^1.1.3",
+    "name": "belle-choose-city",
+    "escapedName": "belle-choose-city",
+    "rawSpec": "^1.1.3",
+    "saveSpec": null,
+    "fetchSpec": "^1.1.3"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://10.0.30.96:8381/repository/npm-group/belle-choose-city/-/belle-choose-city-1.1.8.tgz",
+  "_shasum": "9550979871ef3197e01195bc1211150122eaa97d",
+  "_spec": "belle-choose-city@^1.1.3",
+  "_where": "D:\\研发二部\\manlun\\cdp-admin-ui",
+  "bundleDependencies": false,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "core-js": "^2.6.5",
+    "element-ui": "^2.8.2",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1"
+  },
+  "deprecated": false,
+  "description": " belle-choose-city-百丽组件库",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "keyword": "belle-choose-city 业务通用组件 百丽组件库",
+  "main": "lib/belle-choose-city.umd.min.js",
+  "name": "belle-choose-city",
+  "private": false,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "dev": "vue-cli-service serve",
+    "lib": "vue-cli-service build --target lib  --dest lib packages/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "version": "1.1.8"
+}
